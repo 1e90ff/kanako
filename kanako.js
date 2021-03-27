@@ -49,10 +49,16 @@ class Kanako {
         this.maxResults = maxResults || 25;
 
         /**
+         * @type {?string}
+         * @description Filter by search term.
+         */
+        this.searchQuery = null;
+
+        /**
          * @type {string}
          * @description Post content mode: "full", "summary" or "default".
          */
-        this.contentMode = "summary";
+        this.contentMode = "default";
 
         /**
          * @type {?string}
@@ -182,6 +188,7 @@ class Kanako {
         let url = `${this.blogUrl}feeds/posts/${this.contentMode}?alt=json`;
         if (this.startIndex)   url += `&start-index=${this.startIndex}`;
         if (this.maxResults)   url += `&max-results=${this.maxResults}`;
+        if (this.searchQuery)  url += `&q=${encodeURIComponent(this.searchQuery)}`;
         if (this.updatedMin)   url += `&updated-min=${this.updatedMin}`;
         if (this.updatedMax)   url += `&updated-max=${this.updatedMax}`;
         if (this.publishedMin) url += `&published-min=${this.publishedMin}`;

@@ -24,6 +24,9 @@ kanako.updatedMax   = "2021-01-31T23:59:59.999Z";
 kanako.publishedMin = "2021-01-01T00:00:00.000Z";
 kanako.publishedMax = "2021-01-31T23:59:59.999Z";
 
+// 2.5 Filter by search term.
+kanako.searchQuery = "blogger";
+
 // 3. Receive a new batch of posts for every request.
 kanako.get()
     .then((posts) => {
