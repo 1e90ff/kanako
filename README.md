@@ -38,7 +38,7 @@ kanako.resetStartIndex();
 
 ## Response example
 
-````javascript
+```javascript
 [
   {
     link: "https://myblog.blogspot.com/2021/03/lorem-ipsum.html",
